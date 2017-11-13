@@ -16,3 +16,7 @@ You can read more from me on [codefx.org](http://codefx.org) and follow me [on T
     * install [2017.3 EAP](https://www.jetbrains.com/idea/nextversion/)
     * go to an occurrence of `var`, hit _ALT + Enter_, and "Enable support for beta java version"
     * in project and module settings, make sure that language level _X_ is selected
+
+## Language Changes
+
+* [local-variable type inference with `var`](src/main/java/org/codefx/demo/java10/lang/var/VariableTypeInference.java) ([blog post](http://blog.codefx.org/java/java-10-var-type-inference/), [JEP 286](http://openjdk.java.net/jeps/286))
