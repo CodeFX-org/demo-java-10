@@ -5,13 +5,12 @@ The links below take you to the demo in this project, the JEP responsible for in
 
 Putting everything here will take a while, so you have to be patient.
 If you can't, check out the [JDK 10 page](http://openjdk.java.net/projects/jdk/10/) and look through the JEPs.
-You can read more from me on [codefx.org](http://codefx.org) and follow me [on Twitter](https://twitter.com/nipafx)
- (and even [G+](https://plus.google.com/+NicolaiParlog), I guess).
+You can read more from me on [codefx.org](http://codefx.org) ([Java 10 tag](https://blog.codefx.org/tag/java-10/)) and follow me [on Twitter](https://twitter.com/nipafx) (and even on [G+](https://plus.google.com/+NicolaiParlog), I guess).
 
 ## Setup
 
 * download a [JDK 10 EA build](http://jdk.java.net/10/) and unpack it
-* to use with Maven simply set `target` and `release` to `10` (see [`pom.xml`](master/pom.xml#L13-L14))
+* to use with Maven simply set `target` and `release` to `10` (see [`pom.xml`](pom.xml#L13-L14))
 * to use with IntelliJ:
     * install [2017.3 EAP](https://www.jetbrains.com/idea/nextversion/)
     * go to an occurrence of `var`, hit _ALT + Enter_, and "Enable support for beta java version"
