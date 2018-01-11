@@ -50,7 +50,13 @@ public class VariableTypeInference {
 
 		// anonymous class types
 		var strings = new ArrayList<String>() {
+			public int tenSize() {
+				return 10 * size();
+			}
 		};
+
+		strings.add("1");
+		System.out.format("TenSize of %s is %d.%n", strings, strings.tenSize());
 
 		// intersection types
 		CharSequence chars = "c";
