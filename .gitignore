@@ -31,3 +31,6 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+
+# Scripts
+app-cds/

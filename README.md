@@ -9,7 +9,7 @@ You can read more from me on [codefx.org](http://codefx.org) ([Java 10 tag](http
 
 ## Setup
 
-* download a [JDK 10 EA build](http://jdk.java.net/10/) and unpack it
+* download [OpenJDK 10](http://jdk.java.net/10/) (not Oracle JDK!) and unpack it
 * to use with Maven simply set `target` and `release` to `10` (see [`pom.xml`](pom.xml#L13-L14))
 * to use with IntelliJ:
     * install [2017.3 EAP](https://www.jetbrains.com/idea/nextversion/)
@@ -18,4 +18,8 @@ You can read more from me on [codefx.org](http://codefx.org) ([Java 10 tag](http
 
 ## Language Changes
 
-* [local-variable type inference with `var`](src/main/java/org/codefx/demo/java10/lang/var/VariableTypeInference.java) ([blog post](http://blog.codefx.org/java/java-10-var-type-inference/), [JEP 286](http://openjdk.java.net/jeps/286))
+* [local-variable type inference with `var`](src/main/java/org/codefx/demo/java10/lang/var/VariableTypeInference.java) ([blog post](http://blog.codefx.org/java/java-10-var-type-inference/), [video](https://www.youtube.com/watch?v=Le1DbpRZdRQ), [JEP 286](http://openjdk.java.net/jeps/286))
+
+## JVM Capabilities
+
+* [application class-dara sharing](app-cds.sh) ([blog post](http://blog.codefx.org/java/application-class-data-sharing/), [JEP 310](http://openjdk.java.net/jeps/310))
