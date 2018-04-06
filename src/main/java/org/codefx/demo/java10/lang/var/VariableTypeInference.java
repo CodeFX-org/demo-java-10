@@ -1,6 +1,8 @@
 package org.codefx.demo.java10.lang.var;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
@@ -16,6 +18,7 @@ public class VariableTypeInference {
 	public static void main(String[] args) throws Exception {
 		simpleVarExample();
 		loopExample();
+		tryExample();
 		powerfulInference();
 		var();
 	}
@@ -43,6 +46,18 @@ public class VariableTypeInference {
 			System.out.print(nr + " ");
 		for (var i = 0; i < numbers.size(); i++)
 			System.out.print(numbers.get(i) + " ");
+		System.out.println();
+	}
+
+	private static void tryExample() {
+		try (var file = new FileInputStream(new File("no-such-file"))) {
+			new BufferedReader(new InputStreamReader(file))
+					.lines()
+					.forEach(System.out::println);
+		} catch (IOException ex) {
+			// at least, we tried
+			System.out.println("There's actually no `no-such-file`. :)");
+		}
 	}
 
 	private static void powerfulInference() {
