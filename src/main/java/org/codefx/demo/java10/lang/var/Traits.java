@@ -3,7 +3,12 @@ package org.codefx.demo.java10.lang.var;
 import java.math.BigDecimal;
 import java.util.function.Supplier;
 
-public class Mixins {
+public class Traits {
+
+	public static void main(String[] args) {
+		var ecorp = new ECorp();
+		report(ecorp);
+	}
 
 	/*
 	 * DOWNSIDES
@@ -21,7 +26,7 @@ public class Mixins {
 	 *  - utility methods
 	 */
 
-	public void report(Megacorp megacorp) {
+	public static void report(Megacorp megacorp) {
 		// without `var` there would be no way to declare a variable
 		// of type `IsSuccessful` and `IsEvil`
 		var corp = (MegacorpDelegate & IsSuccessful & IsEvil) () -> megacorp;
@@ -43,6 +48,26 @@ public class Mixins {
 		BigDecimal earnings();
 
 		BigDecimal taxes();
+
+	}
+
+	static class ECorp implements Megacorp {
+
+		@Override
+		public String name() {
+			return "E-Corp";
+		}
+
+		@Override
+		public BigDecimal earnings() {
+			// "One. Million. Dollars"
+			return new BigDecimal("1000000");
+		}
+
+		@Override
+		public BigDecimal taxes() {
+			return BigDecimal.ONE;
+		}
 
 	}
 
@@ -77,11 +102,11 @@ public class Mixins {
 	// these are concepts that are only useful in a very narrow part of the system
 	// and so they are not added to the original interface to prevent polluting it
 	// with too many methods;
-	// these mixins must not have abstract methods
+	// these traits must not have abstract methods
 
 	interface IsSuccessful extends Megacorp {
 
-		final BigDecimal SUCCESS_BOUNDARY = new BigDecimal("500000000");
+		BigDecimal SUCCESS_BOUNDARY = new BigDecimal("500000000");
 
 		default boolean isSuccessful() {
 			return earnings().compareTo(SUCCESS_BOUNDARY) > 0;
