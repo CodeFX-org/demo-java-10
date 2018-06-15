@@ -20,6 +20,8 @@ You can read more from me on [codefx.org](http://codefx.org) ([Java 10 tag](http
 
 * [local-variable type inference with `var`](src/main/java/org/codefx/demo/java10/lang/var/VariableTypeInference.java) ([blog post](http://blog.codefx.org/java/java-10-var-type-inference/), [video](https://www.youtube.com/watch?v=Le1DbpRZdRQ), [JEP 286](http://openjdk.java.net/jeps/286))
 	* experiments with [intersection types](src/main/java/org/codefx/demo/java10/lang/var/IntersectionTypes.java) ([blog post](http://blog.codefx.org/java/intersection-types-var))
+	* experiments with ad-hoc [fields](src/main/java/org/codefx/demo/java10/lang/var/AdHocFields.java) and [methods](src/main/java/org/codefx/demo/java10/lang/var/AdHocMethods.java) ([blog post](http://blog.codefx.org/java/tricks-var-anonymous-classes/))
+	* experiments with [traits](src/main/java/org/codefx/demo/java10/lang/var/Traits.java) ([blog post](http://blog.codefx.org/java/traits-var))
 
 ## JVM Capabilities
 
