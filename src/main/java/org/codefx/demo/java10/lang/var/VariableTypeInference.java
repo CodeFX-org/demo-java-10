@@ -146,7 +146,7 @@ public class VariableTypeInference {
 	private void inferenceAtADistance() {
 		// "List" case:
 
-		// cross fingers that compiler infers List<User>
+		// cross fingers that compiler infers List<String>
 		var strings = new ArrayList<String>();
 		// but it doesn't, so this is a compile error:
 //		strings = new LinkedList<String>();
